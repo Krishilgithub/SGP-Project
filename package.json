@@ -1,0 +1,26 @@
+{
+  "name": "sgp-project",
+  "version": "1.0.0",
+  "description": "This will contain the group project on hostel management website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Krishilgithub/SGP-Project.git"
+  },
+  "author": "Krishil Aditya Hitarth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Krishilgithub/SGP-Project/issues"
+  },
+  "homepage": "https://github.com/Krishilgithub/SGP-Project#readme",
+  "dependencies": {
+    "express": "^4.19.2",
+    "fs": "^0.0.1-security",
+    "nodemon": "^3.1.4",
+    "path": "^0.12.7",
+    "validator": "^13.12.0"
+  }
+}
