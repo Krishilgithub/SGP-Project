@@ -23,7 +23,23 @@ app.set('view engine', 'hbs');
 hbs.registerPartials(partial_path);
 
 app.get('/', (req, res) => {
-   res.render('index');
+    res.render('index');
+});
+
+app.get('/about', (req, res) => {
+    res.render('about');
+});
+
+app.get('/event', (req, res) => {
+    res.render('event');
+});
+
+app.get('/register', (req, res) => {
+    res.render('register');
+});
+
+app.get('/login', (req, res) => {
+    res.render('login');
 });
 
 app.post('/register', async (req, res) => {
@@ -54,14 +70,6 @@ app.post('/register', async (req, res) => {
         res.status(400).send(error);
     }
 });
-
-app.get('/register', (req, res) => {
-    res.render('register');
-})
-
-app.get('/login', (req, res) => {
-    res.render('login');
-})
 
 app.post('/login', async (req, res) => {
     try {
