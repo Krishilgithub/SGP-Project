@@ -39,14 +39,16 @@ const employeeSchema = new mongoose.Schema({
     }
 });
 
-employeeSchema.pre("save", async function(next){
-    if(this.isModified("password")){
+employeeSchema.pre("save", async function (next) {
+    if (this.isModified("password")) {
         console.log(`The current password is ${this.password}`);
-        this.password=bcrypt.hash(this.password, 10);
-        console.log("The password after bcryption is ", this.password);
+        this.password = await bcrypt.hash(this.password, 10);
+        console.log("The password after bcrypt is ", this.password);
         this.confirmPassword = undefined;
     }
-})
+    next();
+});
+
 
 // Create Collection
 

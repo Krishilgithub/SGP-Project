@@ -26,6 +26,10 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
+app.get('/index', (req, res) => {
+    res.render('index');
+});
+
 app.get('/about', (req, res) => {
     res.render('about');
 });
@@ -90,7 +94,7 @@ app.post('/login', async (req, res) => {
         }
 
     } catch (error) {
-        res.send("There is some technical issue please Try agian later")
+        res.send("There is some technical issue please try agian later")
     }
 })
 
