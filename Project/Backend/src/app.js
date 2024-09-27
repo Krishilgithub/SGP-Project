@@ -9,9 +9,8 @@ const PORT = process.env.PORT || 8000;
 
 const static_path = path.join(__dirname, "../public");
 const template_path = path.join(__dirname, "../templates/views");
-const partial_path = path.join(__dirname, "../templates/partials");
 
-console.log(partial_path);
+console.log(path.join(__dirname, "../templates/partials"));
 console.log(template_path);
 
 app.use(express.json());
@@ -20,7 +19,7 @@ app.use(express.urlencoded({extended:false}))
 app.use(express.static(static_path));
 app.set('views', template_path);
 app.set('view engine', 'hbs');
-hbs.registerPartials(partial_path);
+hbs.registerPartials(path.join(__dirname, "../templates/partials"));
 
 app.get('/', (req, res) => {
     res.render('index');
