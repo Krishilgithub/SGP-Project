@@ -1,0 +1,143 @@
+.hit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: 35px;
+  font-weight: bold;
+  display: flex;
+  font-family: "Ubuntu";
+  color: white;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px var(--p-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.left {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 25px;
+  flex: 1 0 250px;
+  padding: 10px;
+}
+.right {
+  padding: 10px;
+  display: flex;
+  flex: 1 0 250px;
+  flex-direction: column;
+}
+.fillup {
+  background-color: rgb(25, 25, 25);
+  width: 45vw;
+  border-radius: 6px;
+  padding: 10px 10px;
+  border: 3px solid transparent;
+  box-sizing: border-box;
+  transition: all 300ms ease;
+}
+.center {
+  display: flex;
+  justify-content: center;
+}
+.name {
+  margin-bottom: 6px;
+}
+.fillup:hover {
+  box-shadow: 0px 0px 55px var(--p-color);
+  border-radius: 6px;
+  border: 3px solid white;
+}
+.msj {
+  width: 280px;
+  padding-top: 0px;
+  line-height: normal;
+  box-sizing: border-box;
+}
+.msj {
+  height: 210px;
+}
+.message-box {
+  resize: none;
+  height: 210px;
+  overflow: hidden;
+  padding-top: 10px;
+  font-family: "Ubuntu";
+}
+.title:hover::after {
+  content: "";
+  height: 3px;
+  position: absolute;
+  background-color: var(--p-color);
+  top: 43px;
+  animation-name: u;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  border-radius: 3px;
+}
+.title {
+  position: relative;
+  display: flex;
+}
+@keyframes u {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 115%;
+  }
+}
+.button {
+  display: flex;
+  justify-content: center;
+}
+
+.place {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px;
+  margin-bottom: 40px;
+}
+
+input,
+.message-box {
+  height: 30px;
+  border-radius: 3px;
+  border: 3px solid transparent;
+  padding-left: 10px;
+  background-color: black;
+  color: white;
+
+  transition: all 300ms ease;
+}
+input {
+  width: 95%;
+}
+input:hover,
+.message-box:hover {
+  box-shadow: 0px 0px 15px rgb(37, 25, 200);
+  border-radius: 6px;
+  border: 3px solid rgb(255, 255, 255);
+}
+.message-box {
+  resize: none;
+  height: 210px;
+  overflow: hidden;
+  padding-top: 10px;
+  font-family: "Ubuntu";
+}
+.name {
+  margin-bottom: 6px;
+}
+.center {
+  display: flex;
+  justify-content: center;
+}

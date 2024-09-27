@@ -1,0 +1,142 @@
+.logo{
+  /* height: 50px; */
+  width: 70px;
+  background-image: url("un-high-resolution-logo-transparent.png");
+  background-size: 45px 45px;
+  background-position: center; /* Ensures the image stays centered */
+  background-repeat: no-repeat;
+  
+ 
+}
+.moto{
+  display: flex;
+  justify-content: center;
+  gap:5px;
+  margin-left: 10px;
+}
+.project{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.slogen{
+  font-family: "Playwrite CU", cursive;
+
+  margin-top:-9px ;
+  font-size: 12px;
+  font-weight: bold;
+  background: linear-gradient(rgb(122, 7, 246),rgb(255, 0, 213));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.project-name{
+  font-size: 23px;
+  font-family: "Playwrite CU", cursive;
+  background: linear-gradient( rgb(203, 106, 202), #ee0979); /* Adjust colors and direction */
+  -webkit-background-clip: text; /* For Safari/Chrome */
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+}
+.header{
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  height: 70px;
+  gap: 20px;
+  padding-right: 20px;
+  position: fixed;
+  top:0;
+  left:0;
+  right:0px;
+  z-index: 2;
+  background-color: black;
+}
+nav ul li {
+    color:white;
+  list-style-type: none;
+  align-content: center;
+  padding: 10px;
+  text-shadow: 1px 0px 3px rgb(145, 18, 199); /* Slightly lighter shadow */
+  font-size: 20px;
+  position: relative;
+  top: 0px; /* Fixed missing semicolon */
+}
+ul{
+    margin: 0;
+}
+
+nav ul a button{
+  margin: 0;
+  margin-top: 15px;
+  font-family: 'Ubuntu';
+}
+.container {
+  margin: 0px;
+}
+
+nav ul li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-radius: 5px;
+  height: 4px;
+  transform-origin: left; /* Start scaling from the right */
+  transform: scaleX(0);
+  background-color: rgb(145, 18, 199);
+  transition: all 0.5s ease;
+}
+
+nav ul li:hover::after {
+  transform-origin: left; /* Grow towards the right */
+  transform: scaleX(1);
+  
+}
+
+nav ul li:hover {
+  background-color: rgb(33, 33, 33);
+}
+
+/* @keyframes un {
+  from {
+    transform: scaleX(0);
+    transform-origin:left ;
+  }
+  to {
+    transform: scaleX(1);
+  }
+} */
+ 
+/* Ensure list items are displayed properly */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px; /* Add spacing between items */
+  }
+  
+  /* Style the li element */
+  nav ul li {
+    /* display: inline-block; */
+    position: relative;
+    margin-right: 15px; /* Adjust margin as needed */
+  }
+  
+  /* Reset a tag styles and add custom styles */
+  nav ul li a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Adjust the color */
+    font-family: 'Ubuntu', sans-serif; /* Maintain consistent font */
+    font-size: 18px; /* Adjust the size as needed */
+    display: block; 
+    transition: color 0.3s ease; /* Add hover effect */
+  }
+  
+  /* Add hover effect for a tags */
+  nav ul li a:hover {
+    /* color: var(--p-color); Change to desired hover color */
+  }
+  

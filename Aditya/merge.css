@@ -1,0 +1,327 @@
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --p-color: rgb(145, 18, 199);
+}
+body {
+  background-color: black;
+  margin: 0;
+}
+p {
+  margin: 0;
+  color: rgb(255, 255, 255);
+  font-family: "Ubuntu";
+}
+body {
+  margin-top: 100px;
+}
+.button {
+  display: flex;
+  justify-content: center;
+}
+img {
+  height: 150px;
+  width: 100%;
+  object-fit: cover;
+  display: flex;
+}
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  min-width: 250px;
+  width: 350px;
+  height: 550px;
+  border-radius: 5px;
+}
+.card1:hover,
+.card2:hover,
+.card3:hover {
+  transform: translateY(-15px);
+  box-shadow: 0px 0px 85px rgb(145, 18, 199);
+  transition: all 0.5s ease-in-out; /* Smoother transition */
+}
+.card1,
+.card2,
+.card3 {
+  transition: all 0.3s ease;
+  position: relative;
+  border: 3px solid white;
+  /* height: 600px; */
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+.try,
+.big {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+.info {
+  font-size: 30px;
+  position: relative;
+  background-color: transparent;
+  text-shadow: 2px 2px rgb(145, 18, 199);
+  margin-bottom: 30px;
+}
+.info::after {
+  content: "";
+  position: absolute;
+
+  left: -10px;
+  right: 0px;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background-color: rgb(145, 18, 199);
+  padding-top: 2px;
+}
+
+.info:hover::after {
+  animation: lineing 1s ease 0s 1 forwards forwards;
+  animation-name: lineing;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+}
+@keyframes lineing {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 115%;
+  }
+}
+.photo1 {
+  background-image: url("360_F_641433239_pACX3e2VvN6ZtGSAEIK65GLr8kbMZC32.jpg");
+}
+.photo2 {
+  background-image: url("download.jpeg");
+}
+.photo3 {
+  background-image: url("download\ \(1\).jpeg");
+}
+.pho {
+  width: 100%;
+  height: 190px;
+  background-size: cover;
+  background-position: center;
+}
+button {
+  background-color: rgb(145, 18, 199);
+  color: white;
+  padding: 9px 18px;
+  margin-bottom: 9px;
+  font-size: 14px;
+  border-radius: 36px;
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+  border: 3px solid transparent;
+}
+
+button:hover {
+  box-shadow: 0px 0px 15px var(--p-color);
+  border-radius: 50px;
+  border: 3px solid white;
+}
+.center {
+  margin-bottom: 50px;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 15px;
+
+  background-size: 28px 28px; /* Scales the image to fit 32x32 */
+  background-position: center; /* Ensures the image stays centered */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  transition: all 0.15s ease;
+}
+.icon:hover {
+  transform: translateY(-10px);
+
+  width: 32px;
+  height: 32px;
+
+  background-size: 32px 32px; /* Scales the image to fit 32x32 */
+  background-position: center; /* Ensures the image stays centered */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+.icon1 {
+  background-image: url("phone-call.png");
+}
+
+.icon1:hover {
+  box-shadow: 0px 0px 55px var(--p-color);
+  border-radius: 6px;
+  background-image: url("phone-call\ \(1\).png");
+}
+.icon2 {
+  background-image: url("email.png");
+}
+
+.icon2:hover {
+  box-shadow: 0px 0px 55px var(--p-color);
+  border-radius: 6px;
+  background-image: url("email\ \(1\).png");
+}
+
+.cont,
+.cont1,
+.cont2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cont {
+  gap: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  padding-top: 50px;
+  background-color: rgb(25, 25, 25);
+  padding-bottom: 30px;
+  margin-top: 30px;
+}
+
+.fa1 {
+  background-image: url("business.png");
+}
+.fa2 {
+  background-image: url("instagram.png");
+}
+.fa3 {
+  background-image: url("twitter.png");
+}
+.fa4 {
+  background-image: url("social-media\ \(1\).png");
+}
+.fa1:hover {
+  box-shadow: 0px 0px 55px var(--p-color);
+  border-radius: 6px;
+  background-image: url("business\ \(1\).png");
+}
+.fa2:hover {
+  box-shadow: 0px 0px 55px var(--p-color);
+  border-radius: 6px;
+  background-image: url("instagram\ \(1\).png");
+}
+.fa3:hover {
+  box-shadow: 0px 0px 55px var(--p-color);
+  border-radius: 6px;
+  background-image: url("twitter\ \(1\).png");
+}
+.fa4:hover {
+  background-image: url("social-media.png");
+  box-shadow: 0px 0px 55px var(--p-color);
+  border-radius: 6px;
+}
+
+.idk {
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 20px;
+}
+.figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#contact-section {
+  scroll-margin-top: 100px; /* Adjust this value based on your navbar's height */
+}
+.ww {
+  color: white;
+}
+.big {
+  padding: 10px;
+  position: relative;
+  padding-bottom: 20px;
+}
+.big::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background-color: rgb(145, 18, 199);
+  width: 0%;
+  transition: all 0.3s ease;
+  border-radius: 3px;
+}
+.card1:hover .big::after,
+.card2:hover .big::after,
+.card3:hover .big::after {
+  animation: underlineAnimation 0.5s forwards ease-in-out;
+  box-shadow: 0px 0px 1px rgb(255, 255, 255);
+}
+@keyframes underlineAnimation {
+  0% {
+    width: 0%;
+    left: 0;
+    rigth: 100%;
+  }
+  50% {
+    width: 50%;
+    left: 50%;
+    right: 50%;
+  }
+  100% {
+    width: 100%;
+    left: 00%;
+    right: 0%;
+  }
+}
+.details {
+  margin-top: 20px;
+}
+.booknow {
+  position: absolute;
+  bottom: 0px;
+  margin-bottom: -10px; /* Moves the button up by 10px */
+  background-color: rgb(145, 18, 199);
+  color: white;
+  padding: 9px 18px;
+  margin-bottom: 9px;
+  font-size: 14px;
+  border-radius: 36px;
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+  border: 3px solid transparent;
+}
+
+.booknow:hover {
+  box-shadow: 0px 0px 15px var(--p-color);
+  border-radius: 50px;
+  border: 3px solid white;
+}

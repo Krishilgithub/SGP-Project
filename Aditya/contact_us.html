@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact us</title>
+    <link rel="stylesheet" href="contact_us.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="nav_bar.css">
+    <style>
+      :root{
+        --p-color:rgb(145, 18, 199);
+      }
+      body {
+        background-color: black;
+        margin: 0;
+      }
+      p {
+        margin: 0;
+        color: rgb(255, 255, 255);
+        font-family: "Ubuntu";
+        
+      }
+      input,.message-box {
+        height: 30px;
+        border-radius: 3px;
+        border: 3px solid transparent;
+        padding-left: 10px;
+        background-color: black;
+        color: white;
+        
+        transition: all 300ms ease;
+      }
+      input{
+        width:95%;
+      }
+      input:hover ,.message-box:hover {
+        box-shadow: 0px 0px 15px rgb(37, 25, 200);
+        border-radius: 6px;
+        border: 3px solid rgb(255, 255, 255);
+      }
+      .title {
+        font-size: 35px;
+        font-weight: bold;
+        display: flex;
+        /* justify-content: center; */
+        font-family: "Ubuntu";      
+        /* align-items: center; */
+        color: white;
+        margin-bottom: 30px;   
+        text-shadow: 2px 2px  var(--p-color);    
+      }
+      .hit{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .main {
+        background-color: rgb(0, 0, 0);
+      }
+      .left {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        gap: 25px;
+        flex: 1 0 250px;
+        padding: 10px;
+      }
+      .right {
+        padding: 10px;
+        display: flex;
+        flex: 1 0 250px;
+        flex-direction: column;
+      }
+      .button {
+        display: flex;
+        justify-content: center;
+      }
+      .place {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 20px;
+        margin-bottom: 40px;
+      }
+      .fillup {
+        background-color: rgb(25, 25, 25);
+        width: 45vw;
+        border-radius: 6px;
+        padding: 10px 10px;
+        border: 3px solid transparent;
+        box-sizing: border-box;
+        transition: all 300ms ease;
+      }
+      .center {
+        display: flex;
+        justify-content: center;
+      }
+      .name {
+        margin-bottom: 6px;
+      }
+      .fillup:hover {
+        box-shadow: 0px 0px 55px var(--p-color);
+        border-radius: 6px;
+        border: 3px solid white;
+      }
+      button {
+        background-color: var(--p-color);
+        color: white;
+        padding: 10px 20px;
+        margin-bottom: 10px;
+        border-radius: 50px;
+        border: 3px solid transparent;
+        transition: all 300ms ease;
+      }
+      button:hover {
+        box-shadow: 0px 0px 15px var(--p-color);
+        border-radius: 50px;
+        border: 3px solid white;
+      }
+      .msj {
+        height: 100px;
+        width: 280px;
+        padding-top: 0px;
+        line-height: normal;
+        box-sizing: border-box;
+      }
+      .foot {
+  
+      }
+      .try {
+        position: absolute;
+        background-color: lightcoral;
+      }
+      .try0 {
+        position: relative;
+
+        height: 100%;
+        background-color: lightcyan;
+      }
+      .msj{
+        height: 210px;
+      }
+      .message-box{
+        
+        resize: none;
+        height: 210px;
+        overflow: hidden;
+        padding-top:10px ;
+        font-family: 'Ubuntu';
+      }
+      .title:hover::after{
+        content: '';
+        height: 3px;
+        position: absolute;
+        background-color: var(--p-color);        
+        top:43px;
+        animation-name: u;
+        animation-duration: 1s;
+        animation-timing-function: ease;
+        animation-delay: 0s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+      }
+      .title{
+        position: relative;
+        display: flex;
+        /* justify-content: center; */
+      }
+      @keyframes u {
+        0%{
+          width:0%;
+
+        }
+        100%{
+          width: 190px;
+        }
+        
+      }
+
+    </style>
+  </head>
+  <body>
+ 
+
+    <header>
+      <section class="heading">
+        <nav class="header">
+          <ul>
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Contact Us</li>
+            <li>Service</li>
+            <li>Rooms</li>
+            <li>Login/Sign Up</li>
+          </ul>
+        </nav>
+      </section>
+    </header>
+
+    <div class="main">
+      <!-- making title -->
+       <div class="hit">
+
+         <div class="title">
+           <span class="title">Contact Us</span>
+         </div>
+       </div>
+      <div class="center">
+        <!-- main box -->
+        <div class="fillup">
+          <div class="place">
+            <div class="left">
+              <div class="first">
+                <p class="name">Your Name</p>
+                <input type="text" placeholder="Enter a name" />
+              </div>
+              <div class="second">
+                <p class="name">Your Mail</p>
+                  <input type="text" placeholder="Enter email address" />
+              </div>
+              <div class="third">
+                <p class="name">Your Phone Number</p>
+                <input type="text" placeholder="Enter phone number" />
+              </div>
+            </div>
+
+            <div class="right">
+              <p class="name">Enter Your message</p>
+              <!-- <input type="text" placeholder="Your Message"  class="msj"/> -->
+               <textarea name="message-box" id="" class="message-box" placeholder="Enter a Message" rows="8" cols="8"></textarea>
+            </div>
+          </div>
+
+          <div class="button">
+            <button>Send Message</button>
+          </div>
+        </div>
+      </div>
+      <!-- h -->
+      <div class="container">
+       <p>Alternative</p>
+       
+      </div>
+    </div>
+  </body>
+</html>
