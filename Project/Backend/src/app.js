@@ -33,7 +33,7 @@ app.get('/about', (req, res) => {
     res.render('about');
 });
 
-app.get('/event', (req, res) => {
+app.get('/rooms', (req, res) => {
     res.render('event');
 });
 
