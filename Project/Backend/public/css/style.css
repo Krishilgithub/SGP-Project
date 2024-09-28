@@ -1,21 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family:'Poppins', sans-serif;
 }
 
 /* Common Styling */
 
 :root {
-    --bs-dark-color: #1a1d20;
+    /* --bs-dark-color: #1a1d20;
     --bs-dark-primary: #1c1c1c;
     --bs-main-color: #fff;
     --bs-primary-color: #c6c6c6;
     --bs-secondary-color: #29a9fd;
-    --bs-supporting-color: #C850C0;
+    --bs-supporting-color: #C850C0; */
+        --primary-color: #FD4766;
+        --secondary-color: #0e1525;
+        --bg-dark-blue: #091020;
+        --bg-white: #fff;
+        --gray-color: #c6c9d8bf;
+        --gradient-color: linear-gradient(-244deg, var(--primary-color) 0, #337DFF 100%);
+        --gradient-text: linear-gradient(120deg, #1C99FE 20.69%, #7644FF 50.19%, var(--primary-color) 79.69%);
+        --primary-font: 'Poppins', sans-serif;
+        --primary-text: #FD4766;
+        --text-gray: #c6c9d8bf;
+        --text-white: #fff;
 }
 
 body {
@@ -23,6 +35,20 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: #0e1525;
+}
+
+h1{
+    font-size: 45px;
+    line-height: 1.3px;
+    font-weight: 600;
+    color: var(--text-white);
+}
+
+h1:hover{
+    color: rgb(145, 18, 199);
+    border-bottom: 2px solid rgb(145, 18, 199);
+    transition: 0.5s ease-in-out;
 }
 
 /* h1, h2, h3 {
@@ -54,8 +80,19 @@ p {
 /* Styling header  */
 
 .nav-link {
-    color: var(--bs-main-color);
+    /* color: var(--bs-main-color);
     margin-left: 1rem;
+    font-size: 20px;
+    font-weight: 800; */
+    position: relative;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-gray);
+    display: inline-block;
+}
+
+.header-section{
+    background-color: #0e1525;
 }
 
 .nav-link:hover {
@@ -166,12 +203,12 @@ p {
 /* Service Section Styling  */
 
 .service-section{
-    margin-top: 125px;
+    /* margin-top: 125px; */
 }
 
 .service-section--image img{
     width: 20rem;
-    border-radius: 2rem;
+    border-radius: 10px;
 
 }
 
@@ -197,7 +234,7 @@ p {
 
 .gallery-section--image img{
     width: 20rem;
-    border-radius: 2rem;
+    border-radius: 10px;
 }
 
 /* Room Section Styling  */
@@ -221,7 +258,7 @@ p {
 }
 
 .room-section .room-section--para{
-    background-color: #f74f00;
+    background-color: rgb(145, 18, 199);
     height: 400px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
