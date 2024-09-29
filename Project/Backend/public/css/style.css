@@ -510,11 +510,11 @@ button {
     transition: all 0.4s linear;
 }
 
-.room-section .card:hover .main-btn{
-    background-color: #9112c7;
+/* .room-section .card:hover .main-btn{
+    /* background-color: #9112c7;
     color: white;
-    box-shadow: #ef4e0f;
-}
+    box-shadow: #ef4e0f; */
+ /* } */  
 
 .room-section .card:hover .common-heading span{
     color: var(--primary-color);
@@ -582,6 +582,18 @@ button {
         width: 100%;
     }
 }
+.btn{
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    transition: all 0.5s linear;
+    /* width: 20px; */
+}
+.btn:hover{
+    background-color: #9112c7;
+    color: white;
+    border-radius: 10px;
+}
 
 .room-section--para{
     color: #c6c6c6;
@@ -595,7 +607,7 @@ button {
 }
 
 .room-section--para .main-btn:hover{
-    background-color: #0e1525;
+    background-color: #9112c7;
     color: white;
     box-shadow: #ef4e0f;
 }
