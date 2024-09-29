@@ -570,13 +570,14 @@ button {
     background-color: white;
     color: black;
     border-radius: 10px;
-    transition: all 0.5s linear;
+    
     /* width: 20px; */
 }
 .btn:hover{
     background-color: #9112c7;
     color: white;
     border-radius: 10px;
+    transition: all 0.5s linear;
 }
 
 .room-section--para{
