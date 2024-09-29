@@ -520,13 +520,13 @@ button {
     color: var(--primary-color);
 }
 
-.room-section .card:hover, .common-heading span::after{
+.room-section .card:hover .common-heading span::after{
     width: 100%;
 }
 
-.common-heading span:hover::after{
+/* .common-heading span:hover::after{
     width: 100%;
-}
+} */
 
 /* .common-h1-heading span{
     position: relative;
@@ -556,6 +556,22 @@ button {
 
 .common-h1-heading span:hover::after{
     width: 100%;
+}
+
+.common-heading span{
+    display: inline-block;
+    position: relative;
+}
+
+.common-heading span::after{
+    position: absolute;
+    content: '';
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: 0.3s;
+    bottom: 0px;
 }
 
 @keyframes btnHover {
@@ -590,26 +606,10 @@ button {
     /* border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px; */
 }
-
-.common-heading span{
-    display: inline-block;
-    position: relative;
-}
-
-.common-heading span::after{
-    position: absolute;
-    content: '';
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: var(--primary-color);
-    transition: 0.3s;
-    bottom: 0px;
-}
-
+/* 
 .common-heading span:hover{
     color: #9112c7;
-}
+} */
 
 .room-section .btn-primary{
     padding: 5px 0px;
