@@ -1,6 +1,4 @@
-<div class="nav_bar">
-
-</div>
+{{>navbar}}
 
 <div class="main">
     {{>sidebar}}
@@ -8,21 +6,39 @@
     <div class="main_bar">
         <div class="container">
             <div class="my-3 my-lg-0 text-center">
-            <h1 class="mt-4 common-h1-heading"><span>Room Allocation</span></h1>
-            <!-- <p>...</p> -->
+                <h1 class="mt-4 common-h1-heading"><span>Room Allocation</span></h1>
+                <!-- <p>...</p> -->
+            </div>
         </div>
+        <div class="room-allocation-section">
+            <div class="room-allocation-details">
+                <h2 class="text-center mb-3 common-heading"><span>Current Room</span></h2>
+                <div class="room-allocation">
+                    <div class="room-allocation-item">
+                        <p>Room No: <span>401</span></p>
+                    </div>
+                    <div class="room-allocation-item">
+                        <p>Block: <span>Residency</span></p>
+                    </div>
+                    <div class="room-allocation-item">
+                        <p>Sharing: <span>4</span></p>
+                    </div>
+                    <div class="room-allocation-item"></div>
+                        <p>Room type:  <span>Deluxe</span></p>
+                    </div>
+                </div>
+                <div class="text-center"><button class="main-btn mt-3">Change Room</button></div>
+            </div>
         </div>
-        <div class="main-bar-content">
-            
-            
+    </div>
 </div>
 
 {{!-- <div class="sidebar-profile-section"></div>
-            <div class="profile-image">
-                <img src="./images/god.jpg" alt="">
+<div class="profile-image">
+    <img src="./images/god.jpg" alt="">
 
-            </div>
-            <div class="profile-name">
-                <h3>John</h3>
-            </div>
-        </div> --}}
+</div>
+<div class="profile-name">
+    <h3>John</h3>
+</div>
+</div> --}}
