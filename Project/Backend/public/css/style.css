@@ -79,6 +79,9 @@ body {
     border-color: var(--primary-color);
     color: var(--text-white);
 }
+.wrapper button:hover{
+    color: #c6c6c6;
+}
 
 /* h1, h2, h3 {
     font-weight: 600;
@@ -394,8 +397,13 @@ button {
 .contact_wrapper .main-btn{
     color: #000;
     background-color: #fff;
+    border-radius: 10px;
 }
-
+.main-btn-contact{
+    border-radius: 20px;
+    height: 41px;
+    width: 116.89px;
+}
 .contact_details:hover{
     box-shadow: 0px 0px 85px rgb(145, 18, 199);
     transform: translateY(-15px);
@@ -632,13 +640,14 @@ button {
     background-color: white;
     color: black;
     border-radius: 10px;
-    transition: all 0.5s linear;
+    
     /* width: 20px; */
 }
 .btn:hover{
     background-color: #9112c7;
     color: white;
     border-radius: 10px;
+    transition: all 0.5s linear;
 }
 
 .room-section--para{
@@ -746,4 +755,9 @@ button {
 .copyright-text{
     position: relative;
     top: 115px;
+}
+.contact_wrapper button:hover{
+    background-color: #9112c7;
+    color: #c6c6c6;
+
 }
