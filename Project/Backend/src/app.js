@@ -45,6 +45,38 @@ app.get('/login', (req, res) => {
     res.render('login');
 });
 
+app.get('/dashboard', (req, res) => {
+    res.render('dashboard');
+})
+
+app.get('/complain', (req, res) => {
+    res.render('complain');
+})
+
+app.get('/alert', (req, res) => {
+    res.render('alert');
+})
+
+app.get('/room', (req, res) => {
+    res.render('room');
+})
+
+app.get('/menu', (req, res) => {
+    res.render('menu');
+})
+
+app.get('/fees', (req, res) => {
+    res.render('fees');
+})
+
+app.get('/gate', (req, res) => {
+    res.render('gate');
+})
+
+app.get('/notice', (req, res) => {
+    res.render('notice');
+})
+
 app.post('/register', async (req, res) => {
     try {
 
@@ -83,11 +115,20 @@ app.post('/login', async (req, res) => {
         const username = await Register.findOne({email:email});
         const checkPassword = username.password;
 
-        const isMatch = await bcrypt.compare(password, checkPassword);
-
-        if(isMatch){
-            res.render('index');
+        if(!username){
+            res.send("Invalid login details");
         }
+
+        // const isMatch = await bcrypt.compare(password, checkPassword);
+
+        if(checkPassword === password){
+            res.render('dashboard');}
+
+        // const check = await bcrypt.compare
+
+        // if(isMatch){
+        //     res.render('index');
+        // }
         else{
             res.send("Invalid login details");
         }
