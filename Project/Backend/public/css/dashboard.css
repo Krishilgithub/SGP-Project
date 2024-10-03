@@ -62,7 +62,7 @@ body {
     transition: all .4s ease-in-out;
     padding: 10px 27px;
     border: 2px solid var(--gradient-text);
-    font-weight: 700;
+    font-weight: 600;
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -191,7 +191,10 @@ p {
 
 .common-heading span:hover{
     color: #9112c7;
+}
 
+.common-heading span:hover::after{
+    width: 100%;
 }
 
 .btn{
@@ -233,6 +236,15 @@ p {
 
 .sidebar-profile-section {
     flex-shrink: 0;
+}
+
+.sidebar-logout a{
+    color: #0e1525;
+    font-weight: 600;
+}
+
+.sidebar-logout:hover, .sidebar-logout button a{
+    color: #c6c6c6;
 }
 
 .profile{
@@ -413,6 +425,41 @@ p {
 }
 
 .fees-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--bg-dark-blue);
+    margin: 10px 0;
+}
+
+/* Styling the complain section  */
+.complain-section-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--bg-dark-blue);
+    margin: 10px 0;
+}
+
+/* Styling the notice section  */
+.notice-section-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--bg-dark-blue);
+    margin: 10px 0;
+}
+
+.gate-section-details{
     display: flex;
     flex-direction: column;
     justify-content: center;
