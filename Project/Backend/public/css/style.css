@@ -156,6 +156,12 @@ button {
     letter-spacing: 0.01rem !important;
 }
 
+.common-about-heading{
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: 0.01rem !important;
+}
+
 .common-heading span:hover{
     color: var(--primary-color);
 }
@@ -416,6 +422,11 @@ button {
     border: 2px solid #c6c6c6;
 }
 
+.contact-heading{
+    d-flex: flex;
+    flex-wrap: wrap;
+}
+
 .contact_wrapper .form-control,
 .contact_wrapper textarea {
     background-color: transparent;
@@ -528,13 +539,13 @@ button {
     color: var(--primary-color);
 }
 
-.room-section .card:hover, .common-heading span::after{
+.room-section .card:hover .common-heading span::after{
     width: 100%;
 }
 
-.common-heading span:hover::after{
+/* .common-heading span:hover::after{
     width: 100%;
-}
+} */
 
 /* .common-h1-heading span{
     position: relative;
@@ -554,7 +565,7 @@ button {
     height: 2px;
     background: var(--primary-color);
     transition: 0.3s;
-    bottom: -30px;
+    bottom: -28px;
 }
 
 .common-h1-heading span:hover{
@@ -563,6 +574,56 @@ button {
 }
 
 .common-h1-heading span:hover::after{
+    width: 100%;
+}
+
+.common-heading span{
+    display: inline-block;
+    position: relative;
+}
+
+.common-heading span::after{
+    position: absolute;
+    content: '';
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: 0.3s;
+    bottom: 0px;
+}
+
+.common-heading span:hover{
+    color: #9112c7;
+
+}
+
+.common-about-heading span:hover::after{
+    width: 100%;
+}
+
+.common-about-heading span{
+    display: inline-block;
+    position: relative;
+}
+
+.common-about-heading span::after{
+    position: absolute;
+    content: '';
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: 0.3s;
+    bottom: -28px;
+}
+
+.common-about-heading span:hover{
+    color: #9112c7;
+
+}
+
+.common-heading span:hover::after{
     width: 100%;
 }
 
@@ -593,13 +654,13 @@ button {
     font-size: 16px;
 }
 
-.room-section--para .main-btn{
+.main-btn{
     background-color: white;
     color: #000;
     font-weight: 500;
 }
 
-.room-section--para .main-btn:hover{
+.main-btn:hover{
     background-color: #9112c7;
     color: white;
     box-shadow: #ef4e0f;
@@ -611,26 +672,10 @@ button {
     /* border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px; */
 }
-
-.common-heading span{
-    display: inline-block;
-    position: relative;
-}
-
-.common-heading span::after{
-    position: absolute;
-    content: '';
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: var(--primary-color);
-    transition: 0.3s;
-    bottom: 0px;
-}
-
+/* 
 .common-heading span:hover{
     color: #9112c7;
-}
+} */
 
 .room-section .btn-primary{
     padding: 5px 0px;
