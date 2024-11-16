@@ -16,7 +16,7 @@ console.log(template_path);
 app.use(express.json());
 app.use(express.urlencoded({extended:false}))
 
-app.use(express.static(static_path));
+app.use(express.static(static_path));-
 app.set('views', template_path);
 app.set('view engine', 'hbs');
 hbs.registerPartials(path.join(__dirname, "../templates/partials"));
@@ -25,57 +25,17 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
-app.get('/index', (req, res) => {
-    res.render('index');
-});
-
-app.get('/about', (req, res) => {
-    res.render('about');
-});
-
-app.get('/rooms', (req, res) => {
-    res.render('event');
-});
-
-app.get('/register', (req, res) => {
-    res.render('register');
-});
-
 app.get('/login', (req, res) => {
     res.render('login');
 });
 
 app.get('/dashboard', (req, res) => {
     res.render('dashboard');
-})
+});
 
-app.get('/complain', (req, res) => {
-    res.render('complain');
-})
-
-app.get('/alert', (req, res) => {
-    res.render('alert');
-})
-
-app.get('/room', (req, res) => {
-    res.render('room');
-})
-
-app.get('/menu', (req, res) => {
-    res.render('menu');
-})
-
-app.get('/fees', (req, res) => {
-    res.render('fees');
-})
-
-app.get('/gate', (req, res) => {
-    res.render('gate');
-})
-
-app.get('/notice', (req, res) => {
-    res.render('notice');
-})
+app.get('/register', (req, res) => {
+    res.render('register');
+});
 
 app.post('/register', async (req, res) => {
     try {
