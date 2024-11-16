@@ -139,6 +139,27 @@ p {
     word-spacing: .1rem;
 }
 
+/* Advanced Styling */
+.scroll-watcher{
+    position: fixed;
+    height: 5px;
+    width: 100%;
+    bottom: 0;
+    background-color: #fff;
+    scale: 0 1;
+    transform-origin: left;
+    z-index: 1000;
+    animation: scroll-watcher linear;
+    /* animation: scroll-watcher 2s linear infinite; */
+    animation-timeline: scroll();
+}
+
+@keyframes scroll-watcher {
+    to{
+        scale: 1 1;
+    }
+}
+
 /* Styling header  */
 
 input:hover,
@@ -469,7 +490,6 @@ button {
 }
 
 /* About Section Styling  */
-
 .about-section--para{
     display: flex;
     flex-direction: column;
@@ -498,6 +518,7 @@ button {
 .room-section{
     width: 75vw;
     margin: auto;
+    
 }
 
 .room-section .col-lg-4{
@@ -518,9 +539,11 @@ button {
 .room-section .card{
     /* width: 290px; */
     /* border: 2px solid white; */
-    /* height: ; */
+    height: 701px;
     border: 2px solid #c6c6c6;
+    background-color: #0e1525;
     border-top: none;
+    position: relative;
 }
 
 .room-section .card:hover{
@@ -653,6 +676,13 @@ button {
 .room-section--para{
     color: #c6c6c6;
     font-size: 16px;
+}
+
+.btn-div{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .main-btn{
