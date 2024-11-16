@@ -37,34 +37,34 @@ app.get('/register', (req, res) => {
     res.render('register');
 });
 
-app.post('/register', async (req, res) => {
-    try {
+// app.post('/register', async (req, res) => {
+//     try {
 
-        const password = req.body.password;
-        const cpassword = req.body.confirmpassword;
+//         const password = req.body.password;
+//         const cpassword = req.body.confirmpassword;
 
-        if(cpassword === password){
-            const registerEmployee = new Register({
-                firstname : req.body.firstname,
-                lastname : req.body.lastname,
-                email : req.body.email,
-                gender : req.body.gender,
-                phno : req.body.phone,
-                age : req.body.age,
-                password : req.body.password,
-                confirmPassword : req.body.confirmpassword
-            });
+//         if(cpassword === password){
+//             const registerEmployee = new Register({
+//                 firstname : req.body.firstname,
+//                 lastname : req.body.lastname,
+//                 email : req.body.email,
+//                 gender : req.body.gender,
+//                 phno : req.body.phone,
+//                 age : req.body.age,
+//                 password : req.body.password,
+//                 confirmPassword : req.body.confirmpassword
+//             });
 
-            const registered = await registerEmployee.save();
-            res.status(200).render('index');
-        }else{
-            res.send("Your password is not matching. Write password properly")
-        }
+//             const registered = await registerEmployee.save();
+//             res.status(200).render('index');
+//         }else{
+//             res.send("Your password is not matching. Write password properly")
+//         }
 
-    } catch (error) {
-        res.status(400).send(error);
-    }
-});
+//     } catch (error) {
+//         res.status(400).send(error);
+//     }
+// });
 
 app.post('/login', async (req, res) => {
     try {
