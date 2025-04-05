@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities{
+    .main-heading{
+        @apply text-4xl font-semibold
+    }
+
+    .nav-items{
+        @apply relative text-[16px] after:absolute after:h-[2px] after:w-full after:bg-blue-50 after:-bottom-0.5 after:left-0 after:origin-bottom-right after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] after:scale-x-0 hover:after:scale-x-100 hover:after:origin-bottom-left cursor-pointer dark:after:bg-white;
+    }
+}

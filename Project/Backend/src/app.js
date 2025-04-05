@@ -14,7 +14,7 @@ console.log(path.join(__dirname, "../templates/partials"));
 console.log(template_path);
 
 app.use(express.json());
-app.use(express.urlencoded({extended:false}))
+app.use(express.urlencoded({extended:false}));
 
 app.use(express.static(static_path));
 app.set('views', template_path);
