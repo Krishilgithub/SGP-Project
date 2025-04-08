@@ -16,6 +16,10 @@
       "dest": "/Project/Backend/public/$1"
     },
     {
+      "src": "/templates/(.*)",
+      "dest": "/Project/Backend/templates/$1"
+    },
+    {
       "src": "/(.*)",
       "dest": "/api/index.js"
     }
