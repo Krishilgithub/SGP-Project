@@ -8,6 +8,10 @@
     {
       "src": "Project/Backend/public/**",
       "use": "@vercel/static"
+    },
+    {
+      "src": "Project/Backend/templates/**",
+      "use": "@vercel/static"
     }
   ],
   "routes": [

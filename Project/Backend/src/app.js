@@ -6,76 +6,38 @@ const hbs = require("hbs");
 const path = require("path");
 const bcrypt = require("bcryptjs");
 
+// Set up paths
 const static_path = path.join(__dirname, "../public");
 const template_path = path.join(__dirname, "../templates/views");
+const partials_path = path.join(__dirname, "../templates/partials");
 
-console.log(path.join(__dirname, "../templates/partials"));
-console.log(template_path);
-
+// Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-
 app.use(express.static(static_path));
-app.set("views", template_path);
+
+// View engine setup
 app.set("view engine", "hbs");
-hbs.registerPartials(path.join(__dirname, "../templates/partials"));
+app.set("views", template_path);
+hbs.registerPartials(partials_path);
 
-app.get("/", (req, res) => {
-  res.render("index");
-});
+// Routes
+app.get("/", (req, res) => res.render("index"));
+app.get("/index", (req, res) => res.render("index"));
+app.get("/about", (req, res) => res.render("about"));
+app.get("/rooms", (req, res) => res.render("event"));
+app.get("/register", (req, res) => res.render("register"));
+app.get("/login", (req, res) => res.render("login"));
+app.get("/dashboard", (req, res) => res.render("dashboard"));
+app.get("/complain", (req, res) => res.render("complain"));
+app.get("/alert", (req, res) => res.render("alert"));
+app.get("/room", (req, res) => res.render("room"));
+app.get("/menu", (req, res) => res.render("menu"));
+app.get("/fees", (req, res) => res.render("fees"));
+app.get("/gate", (req, res) => res.render("gate"));
+app.get("/notice", (req, res) => res.render("notice"));
 
-app.get("/index", (req, res) => {
-  res.render("index");
-});
-
-app.get("/about", (req, res) => {
-  res.render("about");
-});
-
-app.get("/rooms", (req, res) => {
-  res.render("event");
-});
-
-app.get("/register", (req, res) => {
-  res.render("register");
-});
-
-app.get("/login", (req, res) => {
-  res.render("login");
-});
-
-app.get("/dashboard", (req, res) => {
-  res.render("dashboard");
-});
-
-app.get("/complain", (req, res) => {
-  res.render("complain");
-});
-
-app.get("/alert", (req, res) => {
-  res.render("alert");
-});
-
-app.get("/room", (req, res) => {
-  res.render("room");
-});
-
-app.get("/menu", (req, res) => {
-  res.render("menu");
-});
-
-app.get("/fees", (req, res) => {
-  res.render("fees");
-});
-
-app.get("/gate", (req, res) => {
-  res.render("gate");
-});
-
-app.get("/notice", (req, res) => {
-  res.render("notice");
-});
-
+// API Routes
 app.post("/register", async (req, res) => {
   try {
     const password = req.body.password;
@@ -109,28 +71,18 @@ app.post("/login", async (req, res) => {
     const password = req.body.password;
 
     const username = await Register.findOne({ email: email });
-    const checkPassword = username.password;
-
     if (!username) {
-      res.send("Invalid login details");
+      return res.send("Invalid login details");
     }
 
-    // const isMatch = await bcrypt.compare(password, checkPassword);
-
+    const checkPassword = username.password;
     if (checkPassword === password) {
       res.render("dashboard");
-    }
-
-    // const check = await bcrypt.compare
-
-    // if(isMatch){
-    //     res.render('index');
-    // }
-    else {
+    } else {
       res.send("Invalid login details");
     }
   } catch (error) {
-    res.send("There is some technical issue please try agian later");
+    res.send("There is some technical issue please try again later");
   }
 });
 
