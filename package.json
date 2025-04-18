@@ -19,7 +19,7 @@
   "homepage": "https://github.com/Krishilgithub/SGP-Project#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
-    "express": "^4.19.2",
+    "express": "^4.21.1",
     "fs": "^0.0.1-security",
     "hbs": "^4.2.0",
     "mongoose": "^8.6.1",
